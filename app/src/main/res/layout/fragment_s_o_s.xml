@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:ignore="ExtraText">
+
+    <!-- Adjusted ListView height to take available space while leaving room for the button -->
+    <ListView
+        android:id="@+id/contactListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+    android:choiceMode="multipleChoice" />
+
+    <!-- Button for sending SOS with margin to position it better above the FAB -->
+    <Button
+        android:id="@+id/sendSOSButton"
+        android:layout_gravity="center"
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="100dp"
+        android:text="Send SOS" /> <!-- Space for FloatingActionButton -->
+
+</LinearLayout>

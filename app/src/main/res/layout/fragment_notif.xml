@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotifFragment">
+
+    <!-- ListView to display the received SMS -->
+    <ListView
+        android:id="@+id/smsListView"
+        android:layout_width="match_parent"
+        android:layout_height="531dp"
+        android:padding="16dp" />
+
+    <!-- Logout button placed below the ListView -->
+    <Button
+        android:id="@+id/clearNotificationsButton"
+        android:layout_width="150dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Clear Notifications"
+        android:layout_marginTop="210dp"
+        android:onClick="clearNotifications"/>
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="260dp"
+        android:width="500px"
+        android:text="Logout" />
+</FrameLayout>

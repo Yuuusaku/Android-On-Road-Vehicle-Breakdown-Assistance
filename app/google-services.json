@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "137382460223",
+    "project_id": "help-im-stuck",
+    "storage_bucket": "help-im-stuck.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137382460223:android:22f4bb637cb2048bc2f18a",
+        "android_client_info": {
+          "package_name": "com.example.helpimstuck"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3t5RsusvbKVy3m2QTxacxAnqUtxnHnHc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

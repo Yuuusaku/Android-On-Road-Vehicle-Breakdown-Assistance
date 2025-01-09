@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactsFragment"
+    tools:ignore="ExtraText">
+
+    <!-- ListView to display contacts with margin to avoid overlap with Bottom Navigation Bar -->
+    <ListView
+        android:id="@+id/contactsView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="56dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="vertical"/>
+</FrameLayout>
