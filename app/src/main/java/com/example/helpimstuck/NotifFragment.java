@@ -81,7 +81,8 @@ public class NotifFragment extends Fragment {
     private void refreshSmsList() {
         smsAdapter.clear();
         for (SmsEntity sms : notifViewModel.getSmsMessages()) {
-            smsAdapter.add("From: " + sms.sender + "\n" + sms.message);
+            String contactName = ContactHelper.getContactName(requireContext(), sms.sender);
+            smsAdapter.add("From: " + contactName + "\n" + sms.message);
         }
         smsAdapter.notifyDataSetChanged();
     }
@@ -115,9 +116,11 @@ public class NotifFragment extends Fragment {
     }
 
     private void showResponseDialog(String sender) {
+        String contactName = ContactHelper.getContactName(requireContext(), sender);
+
         AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
         builder.setTitle("Respond to SMS");
-        builder.setMessage("Do you want to accept or decline the message from " + sender + "?\n" +
+        builder.setMessage("Do you want to accept or decline the message from " + contactName + "?\n" +
                 "Current selected SIM: " + simOptions[selectedSimSlot]);
 
         builder.setSingleChoiceItems(simOptions, selectedSimSlot, (dialog, which) -> selectedSimSlot = which);

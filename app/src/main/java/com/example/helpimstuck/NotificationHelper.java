@@ -14,6 +14,9 @@ public class NotificationHelper {
     public static void showSmsNotification(Context context, String sender, String message) {
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
+        // Fetch the contact name
+        String contactName = ContactHelper.getContactName(context, sender);
+
         // Create a notification channel for Android 8.0+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && notificationManager != null) {
             NotificationChannel channel = new NotificationChannel(
@@ -28,7 +31,7 @@ public class NotificationHelper {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_sos)
                 .setContentTitle("SOS Message Received")
-                .setContentText("From: " + sender + "\nMessage: " + message)
+                .setContentText("From: " + contactName + "\nMessage: " + message)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setAutoCancel(true);
 
